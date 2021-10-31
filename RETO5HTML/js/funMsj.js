@@ -1,6 +1,6 @@
 function consulta() {
     $.ajax({
-        url:"http://129.151.121.28:8080/api/Message/all",
+        url:"http://129.151.111.125:8080/api/Message/all",
         type:"GET",
         datatype:"JSON",
         success:function(response){
@@ -42,7 +42,7 @@ function guardarInfo(){
             'Accept': 'application/json',
             'Content-Type': 'application/json' 
         },
-        url:"http://129.151.121.28:8080/api/Message/save",
+        url:"http://129.151.111.125:8080/api/Message/save",
         data:datosEnvio,
         type:"POST",
         datatype:"json",
@@ -60,7 +60,7 @@ function borrar(idElemento){
     let datoEnvio = JSON.stringify(elemento);
     console.log(datoEnvio);
     $.ajax({
-        url:"https://g468ced4b1f31f1-dbhotel.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message/",
+        url:"http://129.151.111.125:8080/api/Message/",
         type:"DELETE",
         data:datoEnvio,
         datatype:"json",
@@ -75,7 +75,7 @@ function borrar(idElemento){
 
 function elemEspecifico(idItem){
     $.ajax({
-        url:"http://129.151.121.28:8080/api/Message/" + idItem,
+        url:"http://129.151.111.125:8080/api/Message/" + idItem,
         type:"GET",
         datatype:"JSON",
         success:function(response){
@@ -95,7 +95,7 @@ function editar(){
     let datosEnvio = JSON.stringify(datos)
     console.log(datosEnvio);
     $.ajax({
-        url:"https://g468ced4b1f31f1-dbhotel.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message/",
+        url:"http://129.151.111.125:8080/api/Message/",
         data:datosEnvio,
         contentType:'application/json',
         type:"PUT",

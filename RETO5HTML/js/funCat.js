@@ -1,6 +1,6 @@
 function consulta() {
     $.ajax({
-        url:"http://129.151.121.28:8080/api/Category/all",
+        url:"http://129.151.111.125:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(response){
@@ -44,7 +44,7 @@ function guardarInfo(){
             'Accept': 'application/json',
             'Content-Type': 'application/json' 
         },
-        url:"http://129.151.121.28:8080/api/Category/save",
+        url:"http://129.151.111.125:8080/api/Category/save",
         data:datosEnvio,
         type:"POST",
         datatype:"json",
@@ -58,7 +58,7 @@ function guardarInfo(){
 
 function elemEspecifico(idItem){
     $.ajax({
-        url:"http://129.151.121.28:8080/api/Category/" + idItem,
+        url:"http://129.151.111.125:8080/api/Category/" + idItem,
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){

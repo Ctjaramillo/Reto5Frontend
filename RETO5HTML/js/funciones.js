@@ -1,6 +1,6 @@
 function traerInformacion() {
     $.ajax({
-        url:"https://g468ced4b1f31f1-dbhotel.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/room/room/",
+        url:"http://129.151.111.125:8080/",
         type:"GET",
         datatype:"JSON",
         succes:function(respuesta){
